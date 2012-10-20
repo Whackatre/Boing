@@ -49,6 +49,8 @@ class Boing < BasicGame
     @java_logo = Image.new(JAVA_IMG)
     @java_logo_x = BOARD_X - @java_logo.get_width - 5
     @java_logo_y = 5
+
+    @background = Color::blue.darker(GRAD_DARK)
   end
 
   # Draws stuff.
@@ -66,7 +68,7 @@ class Boing < BasicGame
     '''
 
     # This should be OK for now.
-    g.set_background(Color::blue.darker(GRAD_DARK))
+    g.set_background(@background)
 
     # Draw the balls.
     # TODO: Redo handling for the duke and the dark duke.

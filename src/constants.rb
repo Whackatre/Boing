@@ -1,6 +1,6 @@
 # A list of constants.
 
-NAME = 'Boing'
+NAME = 'Boing2D'
 
 # The path to the resources.
 RESOURCES = './res/'
@@ -10,7 +10,7 @@ DUKE_IMG = "#{RESOURCES}duke.gif"
 JAVA_IMG = "#{RESOURCES}java_logo.png"
 
 # The amount of balls.
-AMT_OF_BALLS = 32
+AMT_OF_BALLS = 24
 
 # The target FPS.
 TARGET_FPS = 60
