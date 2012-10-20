@@ -1,23 +1,23 @@
 # A blueprint of a ball.
 
 class Ball
-	attr_reader :x, :y, :vx, :vy, :stuck, :color, :bsize
-	attr_writer :x, :y, :vx, :vy, :stuck, :color, :bsize
+  attr_reader :x, :y, :vx, :vy, :stuck, :color, :bsize
+  attr_writer :x, :y, :vx, :vy, :stuck, :color, :bsize
 
-	# The constructor of this class.
-	def initialize(color, bsize)
-		@color = color
-		@bsize = bsize
+  # The constructor of this class.
+  def initialize(color, bsize)
+    @color = color
+    @bsize = bsize
 
-		# The start location should be at the center.
-		@x = BOARD_X / 2
-		@y = BOARD_Y / 2
+    # The start location should be at the center.
+    @x = BOARD_X / 2
+    @y = BOARD_Y / 2
 
-		# Set velocity of zero.
-		@vx = 0
-		@vy = 0
+    # Set velocity of zero.
+    @vx = 0
+    @vy = 0
 
-		# Unused.. so far.
-		@stuck = false
-	end
+    # Unused.. so far.
+    @stuck = false
+  end
 end
