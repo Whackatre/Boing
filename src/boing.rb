@@ -153,11 +153,6 @@ class Boing < BasicGame
     end
   end
 
-  # Returns a random opaque color.
-  def random_color
-    return Color.new(random(COL_DEP), random(COL_DEP), random(COL_DEP), 255)
-  end
-
 end
 
 # The main class which does the actual launching.
