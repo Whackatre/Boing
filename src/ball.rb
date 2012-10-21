@@ -1,8 +1,7 @@
 # A blueprint of a ball.
 
 class Ball
-  attr_reader :x, :y, :vx, :vy, :stuck, :color, :bsize
-  attr_writer :x, :y, :vx, :vy, :stuck, :color, :bsize
+  attr_accessor :x, :y, :vx, :vy, :stuck, :color, :bsize
 
   # The constructor of this class.
   def initialize(color, bsize)
