@@ -13,5 +13,10 @@ Contributions in any form (especially ideas) are more than welcome. You may cont
 Usage
 -----
 
+If you have JRuby in your path you can do:
+
     jruby ./src/boing.rb
 
+Otherwise put jruby.jar in the 'lib' folder and do:
+
+	java -jar ./lib/jruby.jar ./src/boing.rb
