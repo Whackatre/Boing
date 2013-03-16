@@ -7,6 +7,9 @@ require "#{SRC_PATH}ball.rb"
 require "#{SRC_PATH}constants.rb"
 require "#{SRC_PATH}utils.rb"
 
+# Should work on Linux now. Thanks A_C!
+java.lang.System.set_property("org.lwjgl.librarypath", java.lang.System.get_property("user.dir"))
+
 java_import 'java.lang.Runtime'
 java_import 'org.newdawn.slick.AppGameContainer'
 java_import 'org.newdawn.slick.BasicGame'
