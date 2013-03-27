@@ -11,6 +11,7 @@ var defaultSpeed = 6;
 var colorDepthMin = 105;
 var colorDepthMax = 245;
 var trans = 0.9;
+var updateInterval = 20;
 
 // Canvas variables.
 var c = document.getElementById("ballCanvas");
@@ -73,13 +74,19 @@ function randColor(trans) {
 }
 
 // Instance variables.
-var balls = new Array();
+var balls = [];
 
 // var bouncingBalls = new Array();
 
 window.requestAnimFrame = (function(callback) {
-	return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame;
+	return window.requestAnimationFrame || window.webkitRequestAnimationFrame
+		|| window.mozRequestAnimationFrame || window.oRequestAnimationFrame
+			|| window.msRequestAnimationFrame;
 })();
+
+window.setTimeout(function() {
+	update();
+}, updateInterval);
 
 initBalls(balls);
 
@@ -132,12 +139,13 @@ function update() {
 		}
 	}
 	*/
+	window.setTimeout(function() {
+		update();
+	}, updateInterval);
 }
 
 // The animation loop.
 function animate() {
-	// Update.
-	update();
 
 	// Clear the screen.
 	ctx.clearRect(0, 0, c.width, c.height);
